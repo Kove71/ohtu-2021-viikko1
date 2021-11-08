@@ -72,7 +72,12 @@ class TestVarasto(unittest.TestCase):
         temp_varasto.ota_varastosta(10)
         self.assertAlmostEqual(temp_varasto.saldo, 0)
     
-    def test_merkkijono_oikein(self):
-        temp_varasto = Varasto(10, 5)
+    # def test_merkkijono_oikein(self):
+    #     temp_varasto = Varasto(10, 5)
+    #     merkkijono = "saldo = 5, vielä tilaa 5"
+    #     self.assertEqual(merkkijono, str(temp_varasto))
+    
+    def test_merkkijono_oikein_rikki(self):
+        temp_varasto = Varasto(10, 2)
         merkkijono = "saldo = 5, vielä tilaa 5"
         self.assertEqual(merkkijono, str(temp_varasto))
